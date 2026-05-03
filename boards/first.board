@@ -1,13 +1,23 @@
 {
     "canvases": [
         {
-            "x": 500,
-            "y": 200,
+            "x": 440,
+            "y": 296,
+            "w": 393,
+            "h": 803,
+            "widget": "const TvPlus()",
+            "deps": [
+                "lib/pages/tv_plus.dart"
+            ]
+        },
+        {
+            "x": 37,
+            "y": 246,
             "w": 393,
             "h": 808,
-            "widget": "const HomePage()",
+            "widget": "const AuthPage()",
             "deps": [
-                "lib/pages/home_page.dart"
+                "lib/pages/auth_page.dart"
             ]
         }
     ]

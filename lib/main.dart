@@ -1,24 +1,22 @@
-import 'package:flutter/material.dart';
-import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tvplus/integrations/supabase_service.dart';
+import 'package:nowa_runtime/nowa_runtime.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tvplus/globals/app_state.dart';
 import 'package:tvplus/globals/router.dart';
 
 @NowaGenerated()
-late final SharedPreferences sharedPrefs;
-
-@NowaGenerated()
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
   sharedPrefs = await SharedPreferences.getInstance();
-
+  await SupabaseService().initialize();
   runApp(const MyApp());
 }
 
 @NowaGenerated({'visibleInNowa': false})
 class MyApp extends StatelessWidget {
-  @NowaGenerated()
+  @NowaGenerated({'loader': 'auto-constructor'})
   const MyApp({super.key});
 
   @override
@@ -34,3 +32,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+@NowaGenerated()
+late final SharedPreferences sharedPrefs;

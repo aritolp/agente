@@ -1,4 +1,4 @@
-package com.example.tvplus
+package com.prueba.tvplus
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 
